@@ -1,0 +1,7 @@
+C:\Users\BR\source\repos\E-turn\E-turn\bin\Debug\E-turn.exe.config
+C:\Users\BR\source\repos\E-turn\E-turn\bin\Debug\E-turn.exe
+C:\Users\BR\source\repos\E-turn\E-turn\bin\Debug\E-turn.pdb
+C:\Users\BR\source\repos\E-turn\E-turn\obj\Debug\E-turn.csprojAssemblyReference.cache
+C:\Users\BR\source\repos\E-turn\E-turn\obj\Debug\E-turn.csproj.CoreCompileInputs.cache
+C:\Users\BR\source\repos\E-turn\E-turn\obj\Debug\E-turn.exe
+C:\Users\BR\source\repos\E-turn\E-turn\obj\Debug\E-turn.pdb
