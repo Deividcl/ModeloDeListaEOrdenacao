@@ -11,6 +11,7 @@ namespace E_turn
 
         static void Main(string[] args)
         {
+
             /*1 - Implemente uma função que retorne um array de inteiros ordenado em ordem crescente, esta
                   função recebe arrays de inteiro ordenados.
                   Ex: a = {1, 2, 4, 5, 7}, b = {2, 3, 5, 6}
@@ -27,21 +28,22 @@ namespace E_turn
             Console.Write(String.Join(", ", resultado));
             Console.ReadKey();
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        /*2 - Implemente uma função que receba um array de inteiros e retorne o segundo maior valor contido
-              neste parâmetro de entrada.
-              Ex: Se a função receber o valor { 1, 9, 33, 12, 5 } ela deve retornar o valor 12*/
+            /*2 - Implemente uma função que receba um array de inteiros e retorne o segundo maior valor contido
+                  neste parâmetro de entrada.
+                  Ex: Se a função receber o valor { 1, 9, 33, 12, 5 } ela deve retornar o valor 12*/
 
-            int[] vetor = new int [5] { 1, 9, 33, 12, 5 };
+            int[] vetor = new int[5] { 1, 9, 33, 12, 5 };
             int second_maior = 0;
             int n = vetor.Length;
             Array.Sort(vetor);
-            foreach (int i in vetor);
+            foreach (int i in vetor) ;
             second_maior = vetor[n - 2];
-            
+
             Console.Write("O segundo maior numero é " + second_maior);
             Console.ReadKey();
+            Console.Clear();
 
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -72,8 +74,99 @@ namespace E_turn
              Importante: o espaço entre os números indica que aquele numero foi digitado aquela quantidade de vezes.
              Exemplo: 88 o numero 8 foi digitado 2 vezes o que equivale a letra U.*/
 
+            string caseSwitch = "2";
+            switch (caseSwitch)
+            {
+                case "0":
+                    Console.WriteLine(" ");
+                    break;
+                case "1":
+                    Console.WriteLine("");
+                    break;
+                case "2":
+                    Console.WriteLine("a");
+                    break;
+                case "22":
+                    Console.WriteLine("b");
+                    break;
+                case "222":
+                    Console.WriteLine("c");
+                    break;
+                case "3":
+                    Console.WriteLine("d");
+                    break;
+                case "33":
+                    Console.WriteLine("e");
+                    break;
+                case "333":
+                    Console.WriteLine("f");
+                    break;
+                case "4":
+                    Console.WriteLine("g");
+                    break;
+                case "44":
+                    Console.WriteLine("h");
+                    break;
+                case "444":
+                    Console.WriteLine("i");
+                    break;
+                case "5":
+                    Console.WriteLine("j");
+                    break;
+                case "55":
+                    Console.WriteLine("k");
+                    break;
+                case "555":
+                    Console.WriteLine("l");
+                    break;
+                case "6":
+                    Console.WriteLine("m");
+                    break;
+                case "66":
+                    Console.WriteLine("n");
+                    break;
+                case "666":
+                    Console.WriteLine("o");
+                    break;
+                case "7":
+                    Console.WriteLine("p");
+                    break;
+                case "77":
+                    Console.WriteLine("q");
+                    break;
+                case "777":
+                    Console.WriteLine("r");
+                    break;
+                case "7777":
+                    Console.WriteLine("s");
+                    break;
+                case "8":
+                    Console.WriteLine("t");
+                    break;
+                case "88":
+                    Console.WriteLine("u");
+                    break;
+                case "888":
+                    Console.WriteLine("v");
+                    break;
+                case "9":
+                    Console.WriteLine("w");
+                    break;
+                case "99":
+                    Console.WriteLine("x");
+                    break;
+                case "999":
+                    Console.WriteLine("y");
+                    break;
+                case "9999":
+                    Console.WriteLine("z");
+                    break;
+                default:
+                    Console.WriteLine("Default case");
+                    break;
+            }
 
-
+            Console.ReadKey();
         }
     }
 
