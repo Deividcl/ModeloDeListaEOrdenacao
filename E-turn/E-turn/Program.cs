@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,57 @@ namespace E_turn
 {
     class Program
     {
+        //Questao 3
+        static string entrada = "33 8 88 777 66 0 9 33 22 0 33 0 7777 666 333 8 9 2 777 33 0 7777 666 555 88 8 444 666 66";
+        static  ArrayList[] dicionarioTeclas = new ArrayList[10];
+
+        static void Inicializa()
+        {
+            for (int i = 0; i < 10; i++)
+                dicionarioTeclas[i] = new ArrayList();
+
+
+            dicionarioTeclas[0].Add(" ");
+            dicionarioTeclas[1].Add("");
+
+            dicionarioTeclas[2].Add("A");
+            dicionarioTeclas[2].Add("B");
+            dicionarioTeclas[2].Add("C");
+
+
+            dicionarioTeclas[3].Add("D");
+            dicionarioTeclas[3].Add("E");
+            dicionarioTeclas[3].Add("F");
+
+            dicionarioTeclas[4].Add("G");
+            dicionarioTeclas[4].Add("H");
+            dicionarioTeclas[4].Add("I");
+
+            dicionarioTeclas[5].Add("J");
+            dicionarioTeclas[5].Add("K");
+            dicionarioTeclas[5].Add("L");
+
+            dicionarioTeclas[6].Add("M");
+            dicionarioTeclas[6].Add("N");
+            dicionarioTeclas[6].Add("O");
+
+            dicionarioTeclas[7].Add("P");
+            dicionarioTeclas[7].Add("Q");
+            dicionarioTeclas[7].Add("R");
+            dicionarioTeclas[7].Add("S");
+
+            dicionarioTeclas[8].Add("T");
+            dicionarioTeclas[8].Add("U");
+            dicionarioTeclas[8].Add("V");
+
+            dicionarioTeclas[9].Add("W");
+            dicionarioTeclas[9].Add("X");
+            dicionarioTeclas[9].Add("Y");
+            dicionarioTeclas[9].Add("Z");
+
+        }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
         static void Main(string[] args)
         {
@@ -36,10 +88,10 @@ namespace E_turn
 
             int[] vetor = new int[5] { 1, 9, 33, 12, 5 };
             int second_maior = 0;
-            int n = vetor.Length;
+            int p = vetor.Length;
             Array.Sort(vetor);
             foreach (int i in vetor) ;
-            second_maior = vetor[n - 2];
+            second_maior = vetor[p - 2];
 
             Console.Write("O segundo maior numero é " + second_maior);
             Console.ReadKey();
@@ -74,100 +126,24 @@ namespace E_turn
              Importante: o espaço entre os números indica que aquele numero foi digitado aquela quantidade de vezes.
              Exemplo: 88 o numero 8 foi digitado 2 vezes o que equivale a letra U.*/
 
-            string caseSwitch = "2";
-            switch (caseSwitch)
+            Inicializa();
+
+            string[] teclas = entrada.Split(' ');
+
+            for (int i = 0; i < teclas.Length; i++)
             {
-                case "0":
-                    Console.WriteLine(" ");
-                    break;
-                case "1":
-                    Console.WriteLine("");
-                    break;
-                case "2":
-                    Console.WriteLine("a");
-                    break;
-                case "22":
-                    Console.WriteLine("b");
-                    break;
-                case "222":
-                    Console.WriteLine("c");
-                    break;
-                case "3":
-                    Console.WriteLine("d");
-                    break;
-                case "33":
-                    Console.WriteLine("e");
-                    break;
-                case "333":
-                    Console.WriteLine("f");
-                    break;
-                case "4":
-                    Console.WriteLine("g");
-                    break;
-                case "44":
-                    Console.WriteLine("h");
-                    break;
-                case "444":
-                    Console.WriteLine("i");
-                    break;
-                case "5":
-                    Console.WriteLine("j");
-                    break;
-                case "55":
-                    Console.WriteLine("k");
-                    break;
-                case "555":
-                    Console.WriteLine("l");
-                    break;
-                case "6":
-                    Console.WriteLine("m");
-                    break;
-                case "66":
-                    Console.WriteLine("n");
-                    break;
-                case "666":
-                    Console.WriteLine("o");
-                    break;
-                case "7":
-                    Console.WriteLine("p");
-                    break;
-                case "77":
-                    Console.WriteLine("q");
-                    break;
-                case "777":
-                    Console.WriteLine("r");
-                    break;
-                case "7777":
-                    Console.WriteLine("s");
-                    break;
-                case "8":
-                    Console.WriteLine("t");
-                    break;
-                case "88":
-                    Console.WriteLine("u");
-                    break;
-                case "888":
-                    Console.WriteLine("v");
-                    break;
-                case "9":
-                    Console.WriteLine("w");
-                    break;
-                case "99":
-                    Console.WriteLine("x");
-                    break;
-                case "999":
-                    Console.WriteLine("y");
-                    break;
-                case "9999":
-                    Console.WriteLine("z");
-                    break;
-                default:
-                    Console.WriteLine("Default case");
-                    break;
+                string teclaDigitada = teclas[i];
+                int teclaLida = Int32.Parse(teclaDigitada[0].ToString());
+                int n = teclaDigitada.Length;
+
+                Console.Write(dicionarioTeclas[teclaLida][n - 1]);
+
             }
 
-            Console.ReadKey();
+
+            Console.ReadKey(true);
         }
     }
+    }
 
-}
+
